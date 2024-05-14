@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Laba 6</title>
+</head>
+
+<body>
+    <h1>Лабораторна робота № 6</h1>
+
+    <main>
+        <div class="task">
+            <h2>Завдання №1</h2>
+            <p>У звітному HTML-документі створити html-розміту, яка складається з наступних елементів : текст, кнопка, поле введення. Натискання на кнопку "SHOW ME" має виводити значення з поля введення у консолі.</p>
+            <button id="button_task1" onclick="ShowMe()">SHOW ME</button><input id="input_task1" type="text">
+            <script>
+                function ShowMe() {
+                    let input_t1 = document.getElementById("input_task1");
+                    let text = input_t1.value;
+                    console.log("Результат завдання 1:", text);
+                }
+            </script>
+        </div>
+        <div class="task">
+            <h2>Завдання №3</h2>
+            <p>У звітному HTML-документі створити html-розміту, яка складається з наступних елементів : текст, кнопка, інпут (поле введення ). Кнопка "Приховати" ховає текст , виводячи зірочки замість введеної інформації, замінює назву кнопки на "Розкрити",
+                при повторному натисканні текст знову стає доступним і кнопка набуває початкового вигляду.</p>
+            <input id="input_task3" type="text"><button id="button_task3" onclick="hideText()">Приховати</button>
+            <script>
+                function hideText() {
+                    let input_t3 = document.getElementById("input_task3");
+                    if (input_t3.getAttribute('type') === 'password') {
+                        input_t3.setAttribute('type', 'text');
+                    } else {
+                        input_t3.setAttribute('type', 'password');
+                    }
+
+                }
+            </script>
+        </div>
+        <div class="task">
+            <p>У звітному HTML-документі створити html-розміту, яка складається з наступних елементів : - текст, з використанням селектора класу (class="taskTitle" ) , - div, з використанням селектора ідентифікатора (id="place”)</p>
+
+            <div id="place">
+                <h2 class="taskTitle">Завдання №5</h2>
+            </div>
+            <script>
+                let div_t5 = document.getElementById("place");
+                let text = document.getElementsByClassName("");
+                place.addEventListener("click", ClickFunc);
+
+                function ClickFunc(event) {
+                    if (event.target.classList.contains("taskTitle")) {
+                        console.log("true");
+                    } else {
+                        console.log("false");
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="task">
+            <h2>Завдання №7</h2>
+            <p>Напиши скрипт, який: 1. Порахує і виведе в консоль кількість категорій в ul#categories, тобто елементів li.item. 2. Для кожного элемента li.item у списку ul#categories, знайде і виведе в консоль текст заголовку елемента (тегу h2) і кількість
+                елементів в категорії (усіх li, вкладених в нього). Для виконання цього завдання потрібно використати метод forEach() і властивості навігації по DOM.
+            </p>
+            <ul id="categories">
+                <li class="item">
+                    <h2>Animals</h2>
+                    <ul>
+                        <li>Cat</li>
+                        <li>Hamster</li>
+                        <li>Horse</li>
+                        <li>Parrot</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <h2>Products</h2>
+                    <ul>
+                        <li>Bread</li>
+                        <li>Prasley</li>
+                        <li>Cheese</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="task">
+            <h2>Завдання №8</h2>
+            <p>
+                1. Обробка відправлення форми form.login-form повинна відбуватися за подією submit. 2. Під час відправлення форми сторінка не повинна перезавантажуватися. 3. Якщо при сабміті у формі є незаповнені поля, виводь alert з попередженням про те, що 'All form
+                fields must be filled in'. Не додавай на інпути атрибут required, валідація має відбуватися саме через JS. 4. Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт з двома властивостями, де ключ — це ім'я інпутів,
+                а значення — відповідні значення цих інпутів, очищені від пробілів по краях. Для доступу до елементів форми використовуй властивість elements. 5. При сабміті форми виведи об'єкт із введеними даними в консоль і очисти значення полів форми
+                методом reset.
+            </p>
+            <form class="login-form" onsubmit="handleSubmit(event)">
+                <label>
+                     Email
+                     <input type="email" name="email" />
+                 </label>
+                <label>
+                     Password
+                     <input type="password" name="password" />
+                 </label>
+                <button type="submit">Log in</button>
+            </form>
+
+        </div>
+
+        <div class="task">
+            <h2>Завдання №9</h2>
+            <p>Напиши скрипт, який змінює колір фону елемента body через інлайн-стиль по кліку на button.change-color і задає це значення кольору текстовим вмістом для span.color.
+            </p>
+            <div class="widget">
+                <p>Background color: <span class="color">-</span></p>
+                <button type="button" class="change-color">Change color</button>
+            </div>
+        </div>
+
+        <div class="task">
+            <h2>Завдання №10</h2>
+            <div class="widget">
+                <div id="controls">
+                    <input type="number" min="1" max="100" step="1" />
+                    <button type="button" data-create>Create</button>
+                    <button type="button" data-destroy>Destroy</button>
+                </div>
+
+                <div id="boxes"></div>
+            </div>
+        </div>
+    </main>
+    <script src="task5.js"></script>
+    <script src="task7.js"></script>
+    <script src="task8.js"></script>
+    <script src="task9.js"></script>
+    <script src="task10.js"></script>
+</body>
+
+</html>
