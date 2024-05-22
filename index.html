@@ -31,11 +31,14 @@
             <input id="input_task3" type="text"><button id="button_task3" onclick="hideText()">Приховати</button>
             <script>
                 function hideText() {
+                    let button_t3 = document.getElementById("button_task3");
                     let input_t3 = document.getElementById("input_task3");
                     if (input_t3.getAttribute('type') === 'password') {
                         input_t3.setAttribute('type', 'text');
+                        button_t3.innerHTML = "Приховати";
                     } else {
                         input_t3.setAttribute('type', 'password');
+                        button_t3.innerHTML = "Розкрити";
                     }
 
                 }
@@ -143,7 +146,6 @@
             </div>
         </div>
     </main>
-    <script src="task5.js"></script>
     <script src="task7.js"></script>
     <script src="task8.js"></script>
     <script src="task9.js"></script>

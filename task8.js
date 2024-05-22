@@ -1,5 +1,3 @@
-console.log('Завдання №8\n')
-
 function handleSubmit(event) {
     event.preventDefault();
     form = event.target
@@ -8,7 +6,7 @@ function handleSubmit(event) {
     let password = form.elements.password.value.trim()
 
     if (email === "" || password === "") {
-        alert("Усі поля форми повинні бути заповненими, передивіться форму!!!")
+        alert("All form fields must be filled in !!!")
     } else {
         let data = {}
         data['email'] = email
