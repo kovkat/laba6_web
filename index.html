@@ -53,10 +53,10 @@
             <script>
                 let div_t5 = document.getElementById("place");
                 let text = document.getElementsByClassName("");
-                place.addEventListener("click", ClickFunc);
+                div_t5.addEventListener("click", ClickFunc);
 
                 function ClickFunc(event) {
-                    if (event.target.classList.contains("taskTitle")) {
+                    if (event.target.classList.contains(text)) {
                         console.log("true");
                     } else {
                         console.log("false");
