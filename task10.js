@@ -28,8 +28,8 @@ function createBoxes(amount) {
         // Додаємо текст та стилі до кожного
         box.innerHTML = ` Box ${i + 1}`;
         //ширину та довжину збільшуємо порівняно з попереднім
-        box.style.width = `${30 + (10 * i)}px`;
-        box.style.height = `${30 + (10 * i)}px`;
+        box.style.width = `${50 + (10 * i)}px`;
+        box.style.height = `${50 + (10 * i)}px`;
         box.style.backgroundColor = color;
         container.append(box);
     }
